@@ -1,3 +1,4 @@
+<?php
 /**
  * Astra Child Theme
  *
