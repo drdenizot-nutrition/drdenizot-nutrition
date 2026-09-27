@@ -3,26 +3,26 @@
 # ============================================================
 
 # WordPress core
-/src/wp-admin/
-/src/wp-includes/
+/wp-admin/
+/wp-includes/
 
 # WordPress configuration / secrets
-/src/wp-config.php
-/src/wp-config-*.php
+/wp-config.php
+/wp-config-*.php
 
 # WordPress runtime files
 /.maintenance
-/src/wp-content/advanced-cache.php
-/src/wp-content/object-cache.php
-/src/wp-content/db.php
-/src/wp-content/debug.log
+/wp-content/advanced-cache.php
+/wp-content/object-cache.php
+/wp-content/db.php
+/wp-content/debug.log
 
 # WordPress uploads / generated content
-/src/wp-content/uploads/
+/wp-content/uploads/
 
 # Caches
-/src/wp-content/cache/
-/src/wp-content/litespeed/
+/wp-content/cache/
+/wp-content/litespeed/
 **/cache/
 
 # Backup / temporary files
@@ -41,20 +41,20 @@ backups
 # ============================================================
 
 # Third-party plugins are installed dependencies, not source.
-/src/wp-content/plugins/
+/wp-content/plugins/
 
 # ============================================================
 # Themes
 # ============================================================
 
 # Third-party themes
-/src/wp-content/themes/astra/
-/src/wp-content/themes/hostinger-ai-theme/
-/src/wp-content/themes/twentytwenty*/
+/wp-content/themes/astra/
+/wp-content/themes/hostinger-ai-theme/
+/wp-content/themes/twentytwenty*/
 
 /# Only our custom child theme is tracked
-!/src/wp-content/themes/astra-child/
-!/src/wp-content/themes/astra-child/**
+!/wp-content/themes/astra-child/
+!/wp-content/themes/astra-child/**
 
 # ============================================================
 # Environment / secrets
