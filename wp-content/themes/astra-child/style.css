@@ -7,3 +7,22 @@ Template: astra
 Version: 1.0.0
 Text Domain: astra-child
 */
+
+:root {
+    --site-container: 1240px;
+    --site-content: 960px;
+    --site-article: 780px;
+
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 64px;
+    --space-2xl: 96px;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    /* We'll determine the actual palette after inspecting the current site */
+}
