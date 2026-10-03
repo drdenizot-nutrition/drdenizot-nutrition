@@ -6,6 +6,23 @@
 /wp-admin/
 /wp-includes/
 
+# WordPress core files
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+
 # WordPress configuration / secrets
 /wp-config.php
 /wp-config-*.php
@@ -52,7 +69,7 @@ backups
 /wp-content/themes/hostinger-ai-theme/
 /wp-content/themes/twentytwenty*/
 
-/# Only our custom child theme is tracked
+# Only our custom child theme is tracked
 !/wp-content/themes/astra-child/
 !/wp-content/themes/astra-child/**
 
