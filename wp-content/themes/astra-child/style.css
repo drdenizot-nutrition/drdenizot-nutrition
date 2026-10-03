@@ -7,3 +7,8 @@ Template: astra
 Version: 1.0.0
 Text Domain: astra-child
 */
+
+body {
+    outline: 14px solid red;
+    color: green;
+}
