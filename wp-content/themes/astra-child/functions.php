@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 function drdenizot_enqueue_child_styles() {
     wp_enqueue_style(
         'drdenizot-astra-child',
-        get_stylesheet_directory_uri() . '/style.css',
+        get_stylesheet_uri(),
         array( 'astra-theme-css' ),
         wp_get_theme()->get( 'Version' )
     );
