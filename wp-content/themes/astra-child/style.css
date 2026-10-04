@@ -8,11 +8,21 @@ Version: 1.0.0
 Text Domain: astra-child
 */
 
+/* =========================================================
+   1. Design tokens
+   ========================================================= */
+
 :root {
+    /* Layout */
     --site-container: 1240px;
     --site-content: 960px;
     --site-article: 780px;
 
+    --site-gutter-desktop: 32px;
+    --site-gutter-tablet: 24px;
+    --site-gutter-mobile: 20px;
+
+    /* Spacing */
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 24px;
@@ -20,9 +30,262 @@ Text Domain: astra-child
     --space-xl: 64px;
     --space-2xl: 96px;
 
+    /* Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
 
-    /* We'll determine the actual palette after inspecting the current site */
+    /* Typography */
+    --font-body: "IBM Plex Sans", sans-serif;
+    --font-heading: "EB Garamond", serif;
+
+    /* Colors */
+    --color-text: #566476;
+    --color-heading: #2F3C4C;
+    --color-primary: #2F3C4C;
+    --color-accent: #FD8549;
+    --color-white: #FFFFFF;
+
+    /* Surfaces */
+    --color-background: #FFFFFF;
+    --color-surface: #F7F8F9;
+
+    /* Buttons */
+    --button-padding-y: 14px;
+    --button-padding-x: 24px;
+    --button-radius: var(--radius-md);
+
+    --button-font-size: 16px;
+    --button-font-weight: 600;
 }
+
+/* =========================================================
+   2. Global layout primitives
+   ========================================================= */
+.site-container {
+    width: min(
+        calc(100% - 2 * var(--site-gutter-desktop)),
+        var(--site-container)
+    );
+    margin-inline: auto;
+}
+
+.site-content {
+    width: min(100%, var(--site-content));
+    margin-inline: auto;
+}
+
+.site-article {
+    width: min(100%, var(--site-article));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--space-xl);
+}
+
+.section--narrow {
+    padding-block: var(--space-lg);
+}
+
+/* =========================================================
+   3. Typography
+   ========================================================= */
+
+body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-heading);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.125rem;
+}
+
+/* =========================================================
+   4. Buttons
+   ========================================================= */
+.button-primary,
+.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 48px;
+    padding: var(--button-padding-y) var(--button-padding-x);
+
+    border: 1px solid transparent;
+    border-radius: var(--button-radius);
+
+    font-family: var(--font-body);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button-primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.button-primary:focus-visible,
+.button-secondary:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   5. Cards
+   ========================================================= */
+.feature-card,
+.article-card {
+    border: 1px solid rgba(47, 60, 76, 0.12);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+}
+
+.feature-card {
+    height: 100%;
+    padding: 32px;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(47, 60, 76, 0.2);
+    box-shadow: 0 12px 32px rgba(47, 60, 76, 0.08);
+}
+
+/* =========================================================
+   6. Images
+   ========================================================= */
+.article-card__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.article-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   7. Responsive
+   ========================================================= */
+@media (max-width: 1024px) {
+    .site-container {
+        width: min(
+            calc(100% - 2 * var(--site-gutter-tablet)),
+            var(--site-container)
+        );
+    }
+
+    .section {
+        padding-block: 72px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-container {
+        width: min(
+            calc(100% - 2 * var(--site-gutter-mobile)),
+            var(--site-container)
+        );
+    }
+
+    .section {
+        padding-block: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-card {
+        padding: 24px;
+    }
+}
+
+/* =========================================================
+   8. Accessibility / reduced motion
+   ========================================================= */
+
