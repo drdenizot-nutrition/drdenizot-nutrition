@@ -458,3 +458,66 @@ h6 {
    8. Accessibility / reduced motion
    ========================================================= */
 
+/* =========================================
+   HOMEPAGE — MAIN WRAPPER
+   ========================================= */
+
+.page-home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+/* ==============================
+   PAGE SECTIONS
+   ============================== */
+
+.hero-section {
+    padding-block: var(--space-2xl);
+}
+
+/* ==============================
+   HERO LAYOUT
+   ============================== */
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 767px) {
+    .hero-section {
+        padding-block: var(--space-xl);
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
