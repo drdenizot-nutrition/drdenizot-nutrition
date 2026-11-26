@@ -507,6 +507,10 @@ h6 {
     object-fit: cover;
 }
 
+.hero-corp {
+    aspect-ratio: 4 / 3;
+}
+
 /* ==============================
    RESPONSIVE
    ============================== */
