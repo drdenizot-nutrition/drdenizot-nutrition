@@ -4,18 +4,44 @@ Theme URI: https://staging.drdenizot-nutrition.com
 Description: Custom child theme for Dr Aurélie Denizot Nutrition.
 Author: Dr Aurélie Denizot
 Template: astra
-Version: 1.0.7
+Version: 1.0.8
 Text Domain: astra-child
 */
 
-/* Homepage redesign: remove Astra content constraints */
-body.page-id-3535 .ast-container,
-body.page-id-3535 .ast-article-single,
-body.page-id-3535 .entry-content {
+/* ==========================================
+   HOMEPAGE REDESIGN — ASTRA LAYOUT OVERRIDE
+   Page ID: 3535
+   ========================================== */
+
+/* Astra main content wrapper */
+body.page-id-3535 #content > .ast-container {
+    display: block;
     width: 100%;
     max-width: none;
     padding-inline: 0;
-    margin-inline: 0;
+}
+
+/* Main content area */
+body.page-id-3535 #primary.content-area {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* Article wrapper */
+body.page-id-3535 .ast-article-single {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Gutenberg content */
+body.page-id-3535 .entry-content {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* =========================================================
