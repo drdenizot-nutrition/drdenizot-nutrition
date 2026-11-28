@@ -111,16 +111,16 @@ Text Domain: astra-child
     margin-inline: auto;
 }
 
-.site-article {
+.wp-block-spectra-container.site-article {
     width: min(100%, var(--site-article));
     margin-inline: auto;
 }
 
-.section {
+.wp-block-spectra-container.section {
     padding-block: var(--space-xl);
 }
 
-.section--narrow {
+.wp-block-spectra-container.section--narrow {
     padding-block: var(--space-lg);
 }
 
@@ -424,27 +424,27 @@ h6 {
    7. Responsive
    ========================================================= */
 @media (max-width: 1024px) {
-    .site-container {
+    .wp-block-spectra-container.site-container {
         width: min(
             calc(100% - 2 * var(--site-gutter-tablet)),
             var(--site-container)
         );
     }
 
-    .section {
+    .wp-block-spectra-container.section {
         padding-block: 72px;
     }
 }
 
 @media (max-width: 767px) {
-    .site-container {
+    .wp-block-spectra-container.site-container {
         width: min(
             calc(100% - 2 * var(--site-gutter-mobile)),
             var(--site-container)
         );
     }
 
-    .section {
+    .wp-block-spectra-container.section {
         padding-block: 56px;
     }
 }
@@ -461,17 +461,17 @@ h6 {
 }
 
 @media (max-width: 767px) {
-    .feature-card {
+    .wp-block-spectra-container.feature-card {
         padding: 24px;
     }
 }
 
 @media (max-width: 767px) {
-    .feature-card__title {
+    .wp-block-spectra-container.feature-card__title {
         font-size: 24px;
     }
 
-    .article-card__content {
+    .wp-block-spectra-container.article-card__content {
         padding: 24px;
     }
 }
